@@ -1,18 +1,12 @@
-# Project Name Here
+# Entity Tutorial
 
-#### Epicodus C# exercise, date
+#### Epicodus .NET exercise, 07.14.18
 
-#### By Your Name Here
+#### Abel Trotter
 
 ## Description
 
-Add a description here
-
-## Specs
-
-| Behavior | Input | Output |
-|----------|-------|--------|
-| Behavior | input | output |
+A tutorial to learn the Entity framework.
 
 ## Setup on OSX
 
@@ -22,7 +16,7 @@ Add a description here
 * Run `dotnet restore` from project directory and test directory to install packages
 * Run `dotnet build` from project directory and fix any build errors
 * Run `dotnet test` from the test directory to run the testing suite
-* Run `dotnet run` to start the server
+* Run `dotnet watch run` to start the server with the watcher tool
 
 ## Contribution Requirements
 
@@ -37,10 +31,8 @@ Add a description here
 
 ## Links
 
-* Add links here
-
 ## License
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2018 **Your Name Here**
+Copyright (c) 2018 **Abel Trotter**
