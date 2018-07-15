@@ -19,7 +19,6 @@
 }
 
 .page-header {
-	width: 80%;
 	margin: 10px auto;
 	border-bottom: none;
 }
@@ -29,7 +28,6 @@
 	grid-template-columns: auto auto;
 	padding: 10px;
 	margin: 20px auto;
-	width: 80%;
 	border: 1px solid #e0dddd;
 	border-radius: 5px;
 }
@@ -42,4 +40,16 @@
 
 .grid-item:nth-child(1), .grid-item:nth-child(2) {
 	border-top: none;
+}
+
+.page-box {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.form-box {
+	padding: 10px;
+	margin: 20px auto;
+	border: 1px solid #e0dddd;
+	border-radius: 5px;
 }

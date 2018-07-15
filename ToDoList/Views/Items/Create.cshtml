@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ToDoList.Models.Item
+
+<div class="container">
+    <div class="page-box">
+        <h2 class="fancy-shadow page-header">Add Item</h2>
+        <div class="form-box">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <h4>@Html.LabelFor(model => model.Description)</h4>
+                    @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                </div>
+                <input type="submit" value="Add Item" class="btn btn-lg btn-default">
+            }
+        </div>
+        <p>@Html.ActionLink("Back to List", "Index")</p>
+    </div>
+</div>
