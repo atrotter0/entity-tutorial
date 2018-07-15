@@ -1,7 +1,9 @@
 @{
   Layout = "_Layout";
 }
+@model IEnumerable<ToDoList.Models.Item>
 
   <div class='container'>
-    <h1>Sample index page</h1>
+    <h1>To Do List</h1>
+    <p>@Html.ActionLink("Task list", "Index", "Items")</p>
   </div>
