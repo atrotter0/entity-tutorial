@@ -12,6 +12,8 @@ A tutorial to learn the Entity framework.
 
 * Download and install .Net Core 1.1.4
 * Download and install Mono
+* Download and install MAMP 4.5
+* Open MAMP and click `Start Servers`
 * Clone the repo
 * Run `dotnet restore` from project directory and test directory to install packages
 * Run `dotnet build` from project directory and fix any build errors
@@ -28,6 +30,9 @@ A tutorial to learn the Entity framework.
 ## Technologies Used
 
 * .Net Core 1.1.4
+* MAMP 4.5
+* MySQL
+* Entity Core
 
 ## Links
 
