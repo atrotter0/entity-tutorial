@@ -4,7 +4,11 @@
 
 @model IEnumerable<ToDoList.Models.Item>
 
-<div class='container'>
-    <h1>To Do List</h1>
-    <p>@Html.ActionLink("Task list", "Index", "Items")</p>
+<div class="container">
+    <div class="jumbotron">
+      <h1 class="fancy-shadow">Do It!</h1>
+      <p>An application for staying organized in every-day life.</p>
+      <a href="#" class="btn btn-lg btn-default">Add Item</a>
+      <a href="/items" class="btn btn-lg btn-default">View List</a>
+    </div>
 </div>

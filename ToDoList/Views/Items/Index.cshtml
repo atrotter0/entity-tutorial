@@ -4,14 +4,13 @@
 
 @model IEnumerable<ToDoList.Models.Item>
 
-<div class='container'>
-    <h1>To Do List</h1>
-    <h4>@Html.DisplayNameFor(model => model.Description)</h4>
-    <ul>
+<div class="container">
+    <h2 class="fancy-shadow page-header">List</h2>
+    <div class="grid-container">
         @foreach(var listItem in Model)
         {
-            @Html.DisplayFor(modelItem => listItem.Description)<br/>
-            @Html.ActionLink("Details", "Details", new { id = listItem.ItemId });<br/>
+            <div class="grid-item">@Html.DisplayFor(modelItem => listItem.Description)</div>
+            <div class="grid-item">@Html.ActionLink("Details", "details", new { id = listItem.ItemId })</div>
         }
-    </ul>
+    </div>
 </div>

@@ -1,0 +1,45 @@
+.jumbotron {
+	height: 400px;
+}
+
+.jumbotron p {
+	margin-top: 20px;
+}
+
+.jumbotron .btn {
+	margin-top: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
+.fancy-shadow {
+	text-shadow: 2px 2px 1px #d4d2d2fa;
+}
+
+.page-header {
+	width: 80%;
+	margin: 10px auto;
+	border-bottom: none;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 10px;
+	margin: 20px auto;
+	width: 80%;
+	border: 1px solid #e0dddd;
+	border-radius: 5px;
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: left;
+	padding: 10px;
+}
+
+.grid-item:nth-child(1), .grid-item:nth-child(2) {
+	border-top: none;
+}
