@@ -5,6 +5,7 @@ namespace ToDoList.Models
 {
     public class ToDoListDbContext : DbContext
     {
+
         public DbSet<Item> Items { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
