@@ -1,12 +1,12 @@
-# Entity Tutorial
+# To Do List with Entity
 
 #### Epicodus .NET exercise, 07.14.18
 
-#### Abel Trotter
+#### By Abel Trotter
 
 ## Description
 
-A project to learn the Entity framework.
+A To Do List project to learn the Entity framework.
 
 ## Setup on OSX
 
