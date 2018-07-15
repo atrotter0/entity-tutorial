@@ -1,12 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ToDoList.Models;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace ToDoList.Controllers
 {
     public class ItemsController : Controller
     {
-        private ToDoListContext db = new ToDoListContext();
+        private ToDoListDbContext db = new ToDoListDbContext();
         public IActionResult Index()
         {
             List<Item> model = db.Items.ToList();

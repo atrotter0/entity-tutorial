@@ -1,24 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using ToDoList.Models;
 
 namespace ToDoList
 {
-    // update DbNameHere with correct db name
-    public static class DBConfiguration
-    {
-        public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=todolist;";
-    }
-
     public class Startup
     {
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddEnvironmentVariables();
+                .AddJsonFile("appsettings.json");
             Configuration = builder.Build();
         }
 
@@ -28,7 +29,7 @@ namespace ToDoList
         {
             services.AddMvc();
             services.AddEntityFrameworkMySql()
-            .AddDbContext<ToDoListContext>(options =>
+            .AddDbContext<ToDoListDbContext>(options =>
                                       options
                                            .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
         }

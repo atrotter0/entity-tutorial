@@ -1,8 +1,9 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 
 namespace ToDoList.Models
 {
-    public class ToDoListContext : DbContext
+    public class ToDoListDbContext : DbContext
     {
         public DbSet<Item> Items { get; set; }
 
