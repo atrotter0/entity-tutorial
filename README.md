@@ -6,7 +6,7 @@
 
 ## Description
 
-A tutorial to learn the Entity framework.
+A project to learn the Entity framework.
 
 ## Setup on OSX
 
