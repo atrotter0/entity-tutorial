@@ -38,17 +38,26 @@ namespace ToDoList.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet("items/{id}/edit")]
+        [HttpGet("/items/{id}/edit")]
         public IActionResult Edit(int id)
         {
             Item item = db.Items.FirstOrDefault(items => items.ItemId == id);
             return View(item);
         }
 
-        [HttpPost("items/{id}/edit")]
+        [HttpPost("/items/{id}/edit")]
         public IActionResult Edit(int id, Item item)
         {
             db.Entry(item).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost("/items/{id}/delete")]
+        public IActionResult Delete(int id)
+        {
+            Item item = db.Items.FirstOrDefault(items => items.ItemId == id);
+            db.Items.Remove(item);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

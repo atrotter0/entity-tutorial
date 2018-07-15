@@ -13,6 +13,13 @@
             {
                 <div class="grid-item">@Html.DisplayFor(modelItem => listItem.Description)</div>
                 <div class="grid-item">@Html.ActionLink("Details", "Details", new { id = listItem.ItemId })</div>
+                <div class="grid-item">@Html.ActionLink("Edit", "Edit", new { id = listItem.ItemId })</div>
+                <div class="grid-item">
+                    @using (Html.BeginForm("delete", "items", new { id = listItem.ItemId }, FormMethod.Post))
+                    {
+                        <input type="submit" value="Delete" class="no-btn-styles"/>
+                    }
+                </div>
             }
         </div>
     </div>
