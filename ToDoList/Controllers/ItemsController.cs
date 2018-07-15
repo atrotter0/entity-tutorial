@@ -20,8 +20,8 @@ namespace ToDoList.Controllers
         [HttpGet("/items/{id}")]
         public IActionResult Details(int id)
         {
-            Item thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
-            return View(thisItem);
+            Item item = db.Items.FirstOrDefault(items => items.ItemId == id);
+            return View(item);
         }
 
         [HttpGet("/items/new")]
@@ -34,6 +34,21 @@ namespace ToDoList.Controllers
         public IActionResult Create(Item item)
         {
             db.Items.Add(item);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("items/{id}/edit")]
+        public IActionResult Edit(int id)
+        {
+            Item item = db.Items.FirstOrDefault(items => items.ItemId == id);
+            return View(item);
+        }
+
+        [HttpPost("items/{id}/edit")]
+        public IActionResult Edit(int id, Item item)
+        {
+            db.Entry(item).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
