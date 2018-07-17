@@ -12,6 +12,7 @@
             @foreach(var listItem in Model)
             {
                 <div class="grid-item">@Html.DisplayFor(modelItem => listItem.Description)</div>
+                <div class="grid-item">@Html.DisplayFor(modelItem => listItem.Category.Name)</div>
                 <div class="grid-item">@Html.ActionLink("Details", "Details", new { id = listItem.ItemId })</div>
                 <div class="grid-item">@Html.ActionLink("Edit", "Edit", new { id = listItem.ItemId })</div>
                 <div class="grid-item">
